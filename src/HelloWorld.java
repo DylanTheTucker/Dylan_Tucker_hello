@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class HelloWorld { 
     String name; 
 
     private int age;
+
+    Scanner scanner = new Scanner(System.in);
 
     //Class constructor
     public HelloWorld(String name, int age) { 
@@ -9,8 +13,16 @@ public class HelloWorld {
         this.age = age;
     }
 
+    //constructor with no age
     public HelloWorld(String name) { 
         this.name = name; 
+    }
+
+    //constructor that takes user input
+    public HelloWorld() {
+        this.name = userName();
+        
+        this.age = userAge();
     }
 
     //function
@@ -18,6 +30,7 @@ public class HelloWorld {
         System.out.println("Hello, " + name + "!"); 
     } 
 
+    //greeting with age
     public void introduce() {
         System.out.println("Hello, my name is "     //enter after each plus sign
         + name 
@@ -26,7 +39,28 @@ public class HelloWorld {
         + " years old.");
     }
 
+    //custom greeting
     public void greet(String greeting) {
         System.out.println(greeting);
+    }
+
+    public String userName() {
+        System.out.println("Please enter your name");
+        String s = scanner.nextLine();
+
+        if (s.equals("")) {
+            return userName();
+        }
+        return s;
+    }
+
+    public int userAge() {
+        System.out.println("Please enter your age");
+        int i = scanner.nextInt();
+
+        if (i < 0) {
+            return userAge();
+        }
+        return i;
     }
 }
