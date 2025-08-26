@@ -26,8 +26,8 @@ public class HelloWorld {
     }
 
     //function
-    public void greet() { 
-        System.out.println("Hello, " + name + "!"); 
+    public void greet(HelloWorld nameGet) { 
+        System.out.println("Hello, " + nameGet.name + "!"); 
     } 
 
     //greeting with age
@@ -44,12 +44,13 @@ public class HelloWorld {
         System.out.println(greeting);
     }
 
+    //get user name
     public String userName() {
         System.out.println("Please enter your name");
         String s = scanner.nextLine();
 
         if (s.equals("")) {
-            return userName();
+            return userName(); //re-asks if no name given
         }
         return s;
     }
@@ -59,7 +60,7 @@ public class HelloWorld {
         int i = scanner.nextInt();
 
         if (i < 0) {
-            return userAge();
+            return userAge(); //re-asks if negative number given
         }
         return i;
     }
