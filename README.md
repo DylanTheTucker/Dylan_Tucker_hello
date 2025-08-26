@@ -1,18 +1,32 @@
-## Getting Started
+-------READ ME----------
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+LEVEL 1:
 
-The workspace contains two folders by default, where:
+- Includes output using string variable following set up provided
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+LEVEL 2:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- HelloWorld object has 3 class constructors, two for this level. One class constructor takes just a String name, the other accepts an integer for age.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- introduce() method uses both name and age of HelloWorld object. If an object is not instantiated with an age, it will default to 256.
 
-## Dependency Management
+-Greet allows for a custom greeting by putting it in the method as a string.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- All uses demonstrated in main using a rough "conversation"
+
+LEVEL 3:
+
+- AppLauncher and HelloWorld separated
+
+- Class constructors and methods documented with comments to explain what they are used for
+
+- Third class constructor added, if a HelloWorld object is instantiated without any variables it will take user input using the scanner
+
+- If the user enters an empty name the method will re-call until they enter a valid name, and the same will be done for negative numbers.
+
+- Made it to where the original Greet() function takes a HelloWorld object, and takes the name of this object to use as the greeting. This way the name variable refers solely to the name of the individual represented by each HelloWorld object.
+
+AI Reflection:
+
+- AI not used
