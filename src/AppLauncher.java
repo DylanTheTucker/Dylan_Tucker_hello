@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class AppLauncher {
     //Main Body
     public static void main(String[] args) 

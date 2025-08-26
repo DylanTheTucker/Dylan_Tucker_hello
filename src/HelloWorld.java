@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class HelloWorld { 
     String name; 
 
-    private int age;
+    private int age = 256;
 
     Scanner scanner = new Scanner(System.in);
 
