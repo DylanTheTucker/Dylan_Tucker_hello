@@ -4,39 +4,19 @@ public class AppLauncher {
     //Main Body
     public static void main(String[] args) 
     { 
-        try {
-            
-            //Allows input for name and age
-            Scanner sc = new Scanner(System.in);
+        //Construct HelloWorld Object
+        HelloWorld student = new HelloWorld("Jason", 20); //Intro to name and age
+        HelloWorld THEjason = new HelloWorld("Dylan"); //Only name, multiple class constructors
+        HelloWorld user = new HelloWorld(); //get user name and age
 
-            System.out.println("Name?");
-            String name = sc.next();
+        //introduce student
+        student.introduce(); 
 
-            //incase you try to put empty name
-            if(name.isEmpty())
-            {
-                System.out.println("Invaild");
-                System.exit(0);
-            }
-            System.out.println("age?");
-            int age = sc.nextInt();
-            //Incase you try to put a number less then 0
-            if(age < 0)
-            {
-                System.out.println("Invaild");
-                System.exit(0);
-            }
-            //Construct HelloWorld Object
-            HelloWorld student = new HelloWorld(name, age);
-            HelloWorld THEjason = new HelloWorld(name);
+        //introduce jason AND show off custom greeting
+        THEjason.greet(student); 
+        THEjason.greet("How are you today?");
 
-            //Calling the Methods
-            student.introduce();
-            THEjason.greet(); 
-            THEjason.greet("How are you today?");
-        } 
-         catch (Exception e) {
-            System.out.println("Invaild");
-        }
+        //showcase use of user input
+        user.introduce();
     } 
 }
