@@ -11,7 +11,7 @@ public class AppLauncher {
         student.introduce(); 
 
         //introduce jason AND show off custom greeting
-        THEjason.greet(); 
+        THEjason.greet(student); 
         THEjason.greet("How are you today?");
 
         //showcase use of user input
